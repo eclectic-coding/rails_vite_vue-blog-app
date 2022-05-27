@@ -4,13 +4,6 @@
 //    <%= vite_client_tag %>
 //    <%= vite_javascript_tag 'application' %>
 console.log('Vite ⚡️ Rails')
-
-// If using a TypeScript entrypoint file:
-//     <%= vite_typescript_tag 'application' %>
-//
-// If you want to use .jsx or .tsx, add the extension:
-//     <%= vite_javascript_tag 'application.jsx' %>
-
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
 
 // Example: Load Rails libraries in Vite.
@@ -26,3 +19,17 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 // Example: Import a stylesheet in app/frontend/index.css
 // import '~/index.css'
+import Vue from 'vue'
+import { createInertiaApp } from '@inertiajs/inertia-vue'
+import { resolvePage } from "./pages"
+
+createInertiaApp({
+    resolve: resolvePage,
+    setup({ el, App, props, plugin }) {
+        Vue.use(plugin)
+
+        new Vue({
+            render: h => h(App, props),
+        }).$mount(el)
+    },
+})
