@@ -18,18 +18,16 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // const channels = import.meta.globEager('./**/*_channel.js')
 
 // Example: Import a stylesheet in app/frontend/index.css
-// import '~/index.css'
-import Vue from 'vue'
-import { createInertiaApp } from '@inertiajs/inertia-vue'
+import '~/stylesheets/index.css'
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { resolvePage } from "./pages"
 
 createInertiaApp({
     resolve: resolvePage,
     setup({ el, App, props, plugin }) {
-        Vue.use(plugin)
-
-        new Vue({
-            render: h => h(App, props),
-        }).$mount(el)
+        createApp({ render: () => h(App, props)})
+            .use(plugin)
+            .mount(el)
     },
 })
