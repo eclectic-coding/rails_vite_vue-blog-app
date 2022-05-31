@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
   def home
-    render inertia: 'Home', props: {}
+    render inertia: 'Pages/Home', props: {}
   end
 end

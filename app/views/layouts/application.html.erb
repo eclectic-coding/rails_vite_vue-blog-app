@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-full bg-gray-200">
   <head>
     <title>EcBlogApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,10 +8,11 @@
 
     <%= vite_client_tag %>
     <%= vite_javascript_tag 'application' %>
+    <%= vite_stylesheet_tag 'application' %>
 
   </head>
 
-  <body>
+  <body class="bg-gray-200 font-sans leading-none text-gray-800 antialiased">
     <%= yield %>
   </body>
 </html>

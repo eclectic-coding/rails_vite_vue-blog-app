@@ -1,8 +1,3 @@
-// To see this message, add the following to the `<head>` section in your
-// views/layouts/application.html.erb
-//
-//    <%= vite_client_tag %>
-//    <%= vite_javascript_tag 'application' %>
 console.log('Vite ⚡️ Rails')
 console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify.app/guide/rails')
 
@@ -18,7 +13,7 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // const channels = import.meta.globEager('./**/*_channel.js')
 
 // Example: Import a stylesheet in app/frontend/index.css
-import '~/stylesheets/index.css'
+import '~/stylesheets/application.css'
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { resolvePage } from "./pages"
