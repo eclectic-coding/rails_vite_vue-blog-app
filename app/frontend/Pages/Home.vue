@@ -1,6 +1,7 @@
 <template>
   <div>
     <Layout />
+    <a :href="routes.home">Linking</a>
     <h1>Home {{ message }}</h1>
 
     <p class="mb-4 leading-loose">Welcome here</p>
@@ -19,6 +20,16 @@ export default {
     return {
       message: 'Vue'
     };
+  },
+  computed: {
+    routes(){
+      return {
+        home: this.$api.static.home.path()
+      }
+    }
+  },
+  mounted() {
+    console.log(this.$api.static.home.path());
   }
 };
 </script>
