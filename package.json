@@ -1,4 +1,9 @@
 {
+  "name": "eclectic-coding-blog",
+  "license": "MIT",
+  "scripts": {
+    "build": "vite:build"
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
